@@ -85,3 +85,4 @@
   <Config Name="leavesuffix" Target="leavesuffix" Default="_leave" Mode="" Description="Container Variable: leavesuffix" Type="Variable" Display="always" Required="false" Mask="false">_leave</Config>
   <Config Name="Sound Dirs" Target="/etc/DiscordSoundboard/bin/sounds" Default="" Mode="rw" Description="Container Path: /etc/DiscordSoundboard/bin/sounds. Without this you'll get only the sounds included with the bot. Point this at a directory of .mp3 files to play on the bot." Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Web Interface Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8585</Config>
+</Container>
