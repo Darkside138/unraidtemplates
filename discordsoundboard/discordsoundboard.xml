@@ -76,12 +76,12 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Bot Token" Target="bottoken" Default="" Mode="" Description="Container Variable: bottoken" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Bot Token" Target="bottoken" Default="" Mode="" Description="Container Variable: bottoken. This is required. Get the bot token from discord developer website. Create an application and add it to your server/guild" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Discord Username" Target="username" Default="" Mode="" Description="Container Variable: username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Chat Commands" Target="chatcommands" Default="true" Mode="" Description="Container Variable: chatcommands" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Direct Message" Target="dm" Default="true" Mode="" Description="Container Variable: dm" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Command Character" Target="commandcharacter" Default="?" Mode="" Description="Container Variable: commandcharacter" Type="Variable" Display="always" Required="false" Mask="false">?</Config>
   <Config Name="sizelimit" Target="sizelimit" Default="2000" Mode="" Description="Container Variable: sizelimit" Type="Variable" Display="always" Required="false" Mask="false">2000</Config>
   <Config Name="leavesuffix" Target="leavesuffix" Default="_leave" Mode="" Description="Container Variable: leavesuffix" Type="Variable" Display="always" Required="false" Mask="false">_leave</Config>
-  <Config Name="Sound Dirs" Target="/etc/DiscordSoundboard/bin/sounds" Default="" Mode="rw" Description="Container Path: " Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Sound Dirs" Target="/etc/DiscordSoundboard/bin/sounds" Default="" Mode="rw" Description="Container Path: /etc/DiscordSoundboard/bin/sounds. Without this you'll get only the sounds included with the bot. Point this at a directory of .mp3 files to play on the bot." Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Web Interface Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8585</Config>
