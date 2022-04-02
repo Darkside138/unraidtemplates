@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>DiscordSoundboard</Name>
+  <Repository>davefurrer/discordsoundboard</Repository>
+  <Registry>https://hub.docker.com/r/davefurrer/discordsoundboard</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/Darkside138/DiscordSoundboard</Project>
+  <Overview>Simple soundboard for discord. You can trigger sounds by commands typed in the Discord chat, or you can choose the sound from the web UI. You will need to create a bot account that the bot will use to join and play sounds. The bot can only play sounds/respond to commands for servers it has been given access. Get your bot token from here - https://discord.com/developers/applications. This will not work correctly without a proper Bot Token.</Overview>
+  <Category>Other: MediaApp:Music Network:Web Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8585]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/Darkside138/DiscordSoundboard/master/distFiles/avatar.jpg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1648869127</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Simple soundboard for discord. You can trigger sounds by commands typed in the Discord chat, or you can choose the sound from the web UI. You will need to create a bot account that the bot will use to join and play sounds. The bot can only play sounds/respond to commands for servers it has been given access. Get your bot token from here - https://discord.com/developers/applications. This will not work correctly without a proper Bot Token.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8585</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/SoundboardSounds/</HostDir>
+      <ContainerDir>/etc/DiscordSoundboard/bin/sounds</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>YOUR_BOT_TOKEN</Value>
+      <Name>bottoken</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>YOUR_USER_NAME</Value>
+      <Name>username</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>chatcommands</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>dm</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>?</Value>
+      <Name>commandcharacter</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>2000</Value>
+      <Name>sizelimit</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>_leave</Value>
+      <Name>leavesuffix</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Bot Token" Target="bottoken" Default="" Mode="" Description="Container Variable: bottoken" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Discord Username" Target="username" Default="" Mode="" Description="Container Variable: username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Chat Commands" Target="chatcommands" Default="true" Mode="" Description="Container Variable: chatcommands" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Direct Message" Target="dm" Default="true" Mode="" Description="Container Variable: dm" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Command Character" Target="commandcharacter" Default="?" Mode="" Description="Container Variable: commandcharacter" Type="Variable" Display="always" Required="false" Mask="false">?</Config>
+  <Config Name="sizelimit" Target="sizelimit" Default="2000" Mode="" Description="Container Variable: sizelimit" Type="Variable" Display="always" Required="false" Mask="false">2000</Config>
+  <Config Name="leavesuffix" Target="leavesuffix" Default="_leave" Mode="" Description="Container Variable: leavesuffix" Type="Variable" Display="always" Required="false" Mask="false">_leave</Config>
+  <Config Name="Sound Dirs" Target="/etc/DiscordSoundboard/bin/sounds" Default="" Mode="rw" Description="Container Path: " Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Web Interface Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8585</Config>
