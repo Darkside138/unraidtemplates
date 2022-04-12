@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1648869127</DateInstalled>
+  <DateInstalled>1649782754</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Simple soundboard for discord. You can trigger sounds by commands typed in the Discord chat, or you can choose the sound from the web UI. You will need to create a bot account that the bot will use to join and play sounds. The bot can only play sounds/respond to commands for servers it has been given access. Get your bot token from here - https://discord.com/developers/applications. This will not work correctly without a proper Bot Token and the bot application being added to your discord server. Join the official discord: https://discord.gg/kZTNtfW for support</Description>
@@ -37,52 +37,34 @@
       <ContainerDir>/etc/DiscordSoundboard/bin/sounds</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/DiscordSoundboard/db</HostDir>
+      <ContainerDir>/discordDB</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/DiscordSoundboard</HostDir>
+      <ContainerDir>/etc/DiscordSoundboard/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value>YOUR_BOT_TOKEN</Value>
+      <Value></Value>
       <Name>bottoken</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>YOUR_USER_NAME</Value>
+      <Value></Value>
       <Name>username</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>true</Value>
-      <Name>chatcommands</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>true</Value>
-      <Name>dm</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>?</Value>
-      <Name>commandcharacter</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>2000</Value>
-      <Name>sizelimit</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>_leave</Value>
-      <Name>leavesuffix</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Bot Token" Target="bottoken" Default="" Mode="" Description="Container Variable: bottoken. This is required. Get the bot token from discord developer website. Create an application and add it to your server/guild" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Discord Username" Target="username" Default="" Mode="" Description="Container Variable: username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Chat Commands" Target="chatcommands" Default="true" Mode="" Description="Container Variable: chatcommands" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Direct Message" Target="dm" Default="true" Mode="" Description="Container Variable: dm" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Command Character" Target="commandcharacter" Default="?" Mode="" Description="Container Variable: commandcharacter" Type="Variable" Display="always" Required="false" Mask="false">?</Config>
-  <Config Name="sizelimit" Target="sizelimit" Default="2000" Mode="" Description="Container Variable: sizelimit" Type="Variable" Display="always" Required="false" Mask="false">2000</Config>
-  <Config Name="leavesuffix" Target="leavesuffix" Default="_leave" Mode="" Description="Container Variable: leavesuffix" Type="Variable" Display="always" Required="false" Mask="false">_leave</Config>
-  <Config Name="Sound Dirs" Target="/etc/DiscordSoundboard/bin/sounds" Default="" Mode="rw" Description="Container Path: /etc/DiscordSoundboard/bin/sounds. Without this you'll get only the sounds included with the bot. Point this at a directory of .mp3 files to play on the bot." Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Bot Token" Target="bottoken" Default="" Mode="" Description="Container Variable: bottoken&#13;&#10;Help on how to get a bot token:&#13;&#10;https://github.com/Darkside138/DiscordSoundboard/wiki" Type="Variable" Display="always" Required="true" Mask="false">MTkzNDQ4MDQ0MDAyMjc5NDI0.V2RQhw.7dK1CvQ2TdMCcI2taNQSJrKmgC8</Config>
+  <Config Name="Discord Username" Target="username" Default="" Mode="" Description="Container Variable: username&#13;&#10;This is the name of the bot owner." Type="Variable" Display="always" Required="false" Mask="false">Darkside</Config>
+  <Config Name="Sound Dirs" Target="/etc/DiscordSoundboard/bin/sounds" Default="" Mode="rw" Description="Container Path: Point to a directory of .mp3/.wave files to make accessible in the bot." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/SoundboardSounds/</Config>
   <Config Name="Web Interface Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8585</Config>
+  <Config Name="Database Path" Target="/discordDB" Default="/mnt/user/appdata/DiscordSoundboard" Mode="rw" Description="Container Path: /discordDB" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/DiscordSoundboard/db</Config>
+  <Config Name="ApplicationConfig" Target="/etc/DiscordSoundboard/config" Default="/mnt/user/appdata/DiscordSoundboard" Mode="rw" Description="Container Path: /etc/DiscordSoundboard/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/DiscordSoundboard</Config>
 </Container>
