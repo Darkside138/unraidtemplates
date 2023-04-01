@@ -65,6 +65,6 @@
   <Config Name="Discord Username" Target="username" Default="" Mode="" Description="Container Variable: username&#13;&#10;This is the name of the bot owner." Type="Variable" Display="always" Required="false" Mask="false">Darkside</Config>
   <Config Name="Sound Dirs" Target="/etc/DiscordSoundboard/bin/sounds" Default="" Mode="rw" Description="Container Path: Point to a directory of .mp3/.wave files to make accessible in the bot." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/SoundboardSounds/</Config>
   <Config Name="Web Interface Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8585</Config>
-  <Config Name="Database Path" Target="/discordDB" Default="/mnt/user/appdata/DiscordSoundboard" Mode="rw" Description="Container Path: /discordDB" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/DiscordSoundboard/db</Config>
+  <Config Name="Database Path" Target="/discordDB" Default="/mnt/user/appdata/DiscordSoundboard" Mode="rw" Description="Container Path: /etc/DiscordSoundboard/bin/discordDB" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/DiscordSoundboard/db</Config>
   <Config Name="ApplicationConfig" Target="/etc/DiscordSoundboard/config" Default="/mnt/user/appdata/DiscordSoundboard" Mode="rw" Description="Container Path: /etc/DiscordSoundboard/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/DiscordSoundboard</Config>
 </Container>
