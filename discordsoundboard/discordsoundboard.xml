@@ -61,10 +61,18 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Bot Token" Target="bottoken" Default="" Mode="" Description="Container Variable: bottoken&#13;&#10;Help on how to get a bot token:&#13;&#10;https://github.com/Darkside138/DiscordSoundboard/wiki" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Bot Token" Target="bottoken" Default="" Mode="" Description="Container Variable: bottoken&#13;&#10;Help on how to get a bot token:&#13;&#10;https://github.com/Darkside138/DiscordSoundboard/wiki" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Discord Username" Target="username" Default="" Mode="" Description="Container Variable: username&#13;&#10;This is the name of the bot owner." Type="Variable" Display="always" Required="false" Mask="false">Darkside</Config>
   <Config Name="Sound Dirs" Target="/etc/DiscordSoundboard/bin/sounds" Default="" Mode="rw" Description="Container Path: Point to a directory of .mp3/.wave files to make accessible in the bot." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/SoundboardSounds/</Config>
   <Config Name="Web Interface Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8585</Config>
   <Config Name="Database Path" Target="/discordDB" Default="/mnt/user/appdata/DiscordSoundboard" Mode="rw" Description="Container Path: /etc/DiscordSoundboard/bin/discordDB" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/DiscordSoundboard/db</Config>
   <Config Name="ApplicationConfig" Target="/etc/DiscordSoundboard/config" Default="/mnt/user/appdata/DiscordSoundboard" Mode="rw" Description="Container Path: /etc/DiscordSoundboard/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/DiscordSoundboard</Config>
+  <Config Name="Command Character" Target="commandcharacter" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">?</Config>
+  <Config Name="Admin Role User ID List" Target="adminuserlist" Default="" Mode="" Description="List of discord user id's you like to have admin role. Comma-separated" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Discord Client ID" Target="discordclientid" Default="replace_with_your_discord_client_id" Mode="" Description="https://discord.com/developers/applications&#13;&#10;Select your application and go to OAuth2 in the menu. This is where you get client id and client secret. Add a redirect to your soundboardURL/login/oauth2/code/discord" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Discord Client Secret" Target="discordclientsecret" Default="replace_with_your_discord_secret" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="JWT Secret" Target="jwtsecret" Default="your-secret-key-here-change-this-in-production" Mode="" Description="Set this to a unique value. You can generate one here:&#13;&#10;https://jwtgenerator.com/tools/jwt-generator" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Moderator Role User ID List" Target="moderatoruserlist" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="DJ Role User ID List" Target="djuserlist" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Front End URL" Target="frontendurl" Default="http://localhost:8080" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
