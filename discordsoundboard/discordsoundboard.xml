@@ -39,7 +39,7 @@
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/DiscordSoundboard/db</HostDir>
-      <ContainerDir>/discordDB</ContainerDir>
+      <ContainerDir>/etc/DiscordSoundboard/bin/discordDB</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
